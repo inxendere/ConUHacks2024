@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using OpenAI;
+using TMPro;
 
 public class ChatGPTManager : MonoBehaviour
 {
     private OpenAIApi openAI = new OpenAIApi();
     private List<ChatMessage> messages = new List<ChatMessage>();
     // Start is called before the first frame update
+
+    public TextMeshProUGUI responseText;
 
 
     public async void AskChatGPT(string newText)
@@ -21,7 +24,7 @@ public class ChatGPTManager : MonoBehaviour
         CreateChatCompletionRequest request = new CreateChatCompletionRequest();
         request.Messages = messages;
         // request.Model = "text-embedding-ada-002";
-        request.Model = "gpt-3.5-turbo";
+        request.Model = "gpt-4-1106-preview";
 
         var response = await openAI.CreateChatCompletion(request);
 
@@ -32,6 +35,8 @@ public class ChatGPTManager : MonoBehaviour
             messages.Add(chatResponse);
 
             Debug.Log(chatResponse.Content);
+
+            responseText.text = chatResponse.Content.ToString();
         }
 
     }
