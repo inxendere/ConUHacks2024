@@ -25,7 +25,6 @@ public class IngredientHolder : MonoBehaviour
 
     private void Update()
     {
-
         if (numberOfSelIngredientsCheck != numberOfSelIngredients)
         {
             numberOfSelIngredientsCheck = numberOfSelIngredients;
@@ -42,22 +41,30 @@ public class IngredientHolder : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            // delete all buttons
-            GameObject[] buttons = GameObject.FindGameObjectsWithTag("IngredientButtonTAG");
-
-            foreach (GameObject button in buttons)
-            {
-                Destroy(button);
-            }
-
-
-            foreach (string ingredient in selectedIngredients)
-            {
-                selectedIngredientsString += ingredient + ",";
-            }
-
-            chatGPTManager.AskChatGPT(selectedIngredientsString);
+            PressEnter();
         }
+    }
+
+    public void PressEnter()
+    {
+        // if no ingredient is added, don't continue;
+        if (selectedIngredients.Count < 1) return;
+
+        // delete all buttons
+        GameObject[] buttons = GameObject.FindGameObjectsWithTag("IngredientButtonTAG");
+
+        foreach (GameObject button in buttons)
+        {
+            Destroy(button);
+        }
+
+
+        foreach (string ingredient in selectedIngredients)
+        {
+            selectedIngredientsString += ingredient + ",";
+        }
+
+        chatGPTManager.AskChatGPT(selectedIngredientsString);
     }
 
     public void UpdateIngredientBasket()
