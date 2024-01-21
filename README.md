@@ -7,14 +7,14 @@ An AI driven app built within Unity to help you find your next meal using only y
 
 - [Features](#features)
 - [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-
+- 
 ## Features
 
+Built using Unity so the app runs everywhere
+High quality images from Unsplash
+Responsive and modern UI
+Save money by not throwing out leftovers
 Easy to build
-
 
 ## Installation
 Note: you have to put your own OpenAI api in the user folder.
@@ -37,3 +37,5 @@ request.Model = "gpt-4-1106-preview";
 
 // request.Model = "gpt-3.5-turbo";
 ```
+Then you should be ready to build the Unity project and use.
+
