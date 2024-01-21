@@ -2,6 +2,12 @@
 
 Our submission for ConUHacks VIII.
 An AI driven app built within Unity to help you find your next meal using only your leftovers! Find creative and delicious uses for your ingredients, and learn some new dishes in the process.
+Meet the team:  
+Taief Ahmed:  
+
+Amro Atique:  
+
+
 
 ## Installation
 Note: you have to put your own OpenAI api in the user folder.
