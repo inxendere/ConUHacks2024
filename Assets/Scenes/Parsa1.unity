@@ -281,8 +281,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 875972534}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.000000059604645, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -428,7 +428,7 @@ RectTransform:
   m_Father: {fileID: 321028054}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -665,8 +665,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 224923928}
   m_HandleRect: {fileID: 224923927}
   m_Direction: 0
-  m_Value: 0
-  m_Size: 1
+  m_Value: 1
+  m_Size: 0.99999994
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -847,7 +847,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1390044875
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1041,7 +1041,7 @@ GameObject:
   - component: {fileID: 1517963234}
   - component: {fileID: 1517963233}
   m_Layer: 5
-  m_Name: main page
+  m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1140,9 +1140,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1703095130}
   - component: {fileID: 1703095129}
+  - component: {fileID: 1703095131}
+  - component: {fileID: 1703095132}
   m_Layer: 0
-  m_Name: searchEmpty
-  m_TagString: Untagged
+  m_Name: SearchManager
+  m_TagString: SearchManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1175,6 +1177,237 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1703095131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703095128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31e46f21047ce46ca87e99ddd865bde2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SearchBar: {fileID: 1866070177}
+  canvasTransform: {fileID: 1517963236}
+  ingredientButton: {fileID: 4975404156047274444, guid: 07c494d7a36f89d418e21e82e27c16ca, type: 3}
+  ingredientStartPoint: {fileID: 872879475}
+  verticalSpacing: 10
+  allIngredients:
+  - Spinach
+  - Kale
+  - Arugula
+  - Swiss Chard
+  - Romaine Lettuce
+  - Collard Greens
+  - Mustard Greens
+  - Bok Choy
+  - Iceberg Lettuce
+  - Endive
+  - Watercress
+  - Beet Greens
+  - Turnip Greens
+  - Radicchio
+  - Escarole
+  - "Fris\xE9e"
+  - Butter Lettuce
+  - Dandelion Greens
+  - Mesclun
+  - Broccoli Rabe
+  - Carrots
+  - Broccoli
+  - Cauliflower
+  - Bell Peppers
+  - Tomatoes
+  - Zucchini
+  - Onions
+  - Garlic
+  - Potatoes
+  - Sweet Potatoes
+  - Eggplant
+  - Mushrooms
+  - Corn
+  - Peas
+  - Green Beans
+  - Asparagus
+  - Brussels Sprouts
+  - Cucumbers
+  - Celery
+  - Squash
+  - Apples
+  - Bananas
+  - Oranges
+  - Berries (strawberries, blueberries, raspberries, blackberries)
+  - Grapes
+  - Watermelon
+  - Pineapple
+  - Mango
+  - Peaches
+  - Plums
+  - Pears
+  - Cherries
+  - Kiwi
+  - Avocado
+  - Papaya
+  - Cantaloupe
+  - Lemon
+  - Lime
+  - Grapefruit
+  - Coconut
+  - Rice (white, brown)
+  - Quinoa
+  - Oats
+  - Barley
+  - Wheat
+  - Cornmeal
+  - Buckwheat
+  - Bulgur
+  - Rye
+  - Millet
+  - Farro
+  - Amaranth
+  - Spelt
+  - Teff
+  - Sorghum
+  - Freekeh
+  - Couscous
+  - Polenta
+  - Wild Rice
+  - Triticale
+  - Salmon
+  - Tuna
+  - Shrimp
+  - Cod
+  - Crab
+  - Lobster
+  - Mackerel
+  - Haddock
+  - Sardines
+  - Clams
+  - Oysters
+  - Squid
+  - Octopus
+  - Scallops
+  - Catfish
+  - Tilapia
+  - Halibut
+  - Anchovies
+  - Mahi Mahi
+  - Swordfish
+  - Chicken (breast, thigh)
+  - Beef (steak, ground)
+  - Pork (chops, loin)
+  - Turkey
+  - Lamb
+  - Duck
+  - Eggs
+  - Tofu
+  - Tempeh
+  - Seitan
+  - Venison
+  - Bison
+  - Rabbit
+  - Quail
+  - Edamame
+  - Lentils
+  - Chickpeas
+  - Black Beans
+  - Navy Beans
+  - Pinto Beans
+  - Basil
+  - Cilantro
+  - Mint
+  - Parsley
+  - Rosemary
+  - Thyme
+  - Oregano
+  - Sage
+  - Dill
+  - Chives
+  - Cinnamon
+  - Nutmeg
+  - Cumin
+  - Paprika
+  - Curry Powder
+  - Turmeric
+  - Cardamom
+  - Cloves
+  - Coriander
+  - Fennel Seed
+  - Milk
+  - Cheese (Cheddar, Mozzarella, Parmesan, etc.)
+  - Yogurt
+  - Butter
+  - Cream
+  - Sour Cream
+  - Cottage Cheese
+  - Cream Cheese
+  - Ice Cream
+  - Kefir
+  - Buttermilk
+  - Ghee
+  - Ricotta
+  - Feta
+  - Brie
+  - Camembert
+  - Blue Cheese
+  - Gouda
+  - Swiss Cheese
+  - Provolone
+  - Olive Oil
+  - Canola Oil
+  - Vegetable Oil
+  - Coconut Oil
+  - Sesame Oil
+  - Avocado Oil
+  - Peanut Oil
+  - Sunflower Oil
+  - Grapeseed Oil
+  - Corn Oil
+  - Soybean Oil
+  - Safflower Oil
+  - Flaxseed Oil
+  - Walnut Oil
+  - Almond Oil
+  - Hazelnut Oil
+  - Palm Oil
+  - Cottonseed Oil
+  - Rice Bran Oil
+  - Pumpkin Seed Oil
+  - Spaghetti
+  - Penne
+  - Macaroni
+  - Fusilli
+  - Farfalle (Bow Tie)
+  - Linguine
+  - Fettuccine
+  - Ravioli
+  - Tortellini
+  - Orzo
+  - Basmati Rice
+  - Jasmine Rice
+  - Arborio Rice
+  - Brown Rice
+  - Wild Rice
+  - Soba Noodles
+  - Udon Noodles
+  - Rice Noodles
+  - Couscous
+  - Quinoa Pasta
+--- !u!114 &1703095132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703095128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aba6564e6eda0454aa29f8d409f63ab9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedIngredients: []
 --- !u!1 &1760958342
 GameObject:
   m_ObjectHideFlags: 0
@@ -1345,8 +1578,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.031437, y: 1246.9922}
-  m_SizeDelta: {x: 1500.8, y: 340.8381}
+  m_AnchoredPosition: {x: 0.031437, y: 134}
+  m_SizeDelta: {x: 1500.8, y: 165.3492}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1866070177
 MonoBehaviour:

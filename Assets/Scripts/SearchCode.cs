@@ -3,16 +3,15 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SearchCode : MonoBehaviour
 {
-    public Transform StartPoint;
-    public Transform EndPoint;
-    public Transform currentTransform;
-    public GameObject ContentHolder;
-    public GameObject ElementPrefab;  // Prefab for displaying each element
     public TMP_InputField SearchBar;  // Reference to your input field
-    public Dictionary<string, List<string>> Categories; // Stores your categories and subcategories
+    public Transform canvasTransform;
+    public GameObject ingredientButton; // button prefab
+    public Transform ingredientStartPoint;
+    public int verticalSpacing = 10; // Set the vertical spacing between objects
 
     // this could be a text file or another external file or something for future proofing
     public List<string> allIngredients = new List<string> { "Spinach", "Kale", "Arugula", "Swiss Chard", "Romaine Lettuce", "Collard Greens", "Mustard Greens",
@@ -34,26 +33,27 @@ public class SearchCode : MonoBehaviour
 
     private void Start()
     {
-        currentTransform = StartPoint;
-
-        // PopulateElements(); // Initially populate elements
-
-        // foreach (string ingredient in allIngredients)
-        // {
-        //     Debug.Log(ingredient);
-        // }
-
         SearchBar.onValueChanged.AddListener(OnSearchValueChanged);
-
     }
 
     // Call this method whenever the text in your search bar changes
     public void OnSearchValueChanged(string searchText)
     {
+
+        if (searchText == "" || searchText == null) return;
+
         string searchTermLower = searchText.ToLower();
 
+        GameObject[] gameObjectsWithTag = GameObject.FindGameObjectsWithTag("IngredientButtonTAG");
+
+        // Loop through and destroy each GameObject
+        foreach (GameObject gameObjectWithTag in gameObjectsWithTag)
+        {
+            Destroy(gameObjectWithTag);
+        }
+
         // List to store relevant ingredients
-        var relevantIngredients = new System.Collections.Generic.List<string>();
+        var relevantIngredients = new List<string>();
 
         // Iterate through all ingredients
         foreach (string ingredient in allIngredients)
@@ -70,37 +70,61 @@ public class SearchCode : MonoBehaviour
         }
 
         // Print relevant ingredients to Unity debug log
-        Debug.Log("Relevant Ingredients for '" + searchText + "': " + string.Join(", ", relevantIngredients));
-    }
+        // Debug.Log("Relevant Ingredients for '" + searchText + "': " + string.Join(", ", relevantIngredients));
 
-    private void SearchIngredients(string searchTerm)
-    {
-        // Convert search term to lowercase for case-insensitive search
-        string searchTermLower = searchTerm.ToLower();
+        int i = 0;
 
-        // List to store relevant ingredients
-        var relevantIngredients = new System.Collections.Generic.List<string>();
-
-        // Iterate through all ingredients
-        foreach (string ingredient in allIngredients)
+        foreach (string ingredient in relevantIngredients)
         {
-            // Convert current ingredient to lowercase for case-insensitive comparison
-            string ingredientLower = ingredient.ToLower();
+            Debug.Log(ingredient);
 
-            // Check if the search term is contained in the current ingredient
-            if (ingredientLower.Contains(searchTermLower))
-            {
-                // Add relevant ingredient to the list
-                relevantIngredients.Add(ingredient);
-            }
+            // Vector3 newPosition = ingredientStartPoint.position + Vector3.down * i * verticalSpacing;
+
+            // GameObject ingredientButtonObject = Instantiate(ingredientButton, ingredientStartPoint);
+            // ingredientButtonObject.GetComponentInChildren<TextMeshProUGUI>().text = ingredient;
+
+            GameObject instantiatedUIObject = Instantiate(ingredientButton, canvasTransform);
+            instantiatedUIObject.GetComponentInChildren<TextMeshProUGUI>().text = ingredient;
+
+            // Access RectTransform of the instantiated UI object
+            RectTransform rectTransform = instantiatedUIObject.GetComponent<RectTransform>();
+
+            // Calculate the new anchored position for each UI object
+            Vector2 newAnchoredPosition = new Vector2(0, -i * verticalSpacing);
+
+            Debug.Log(-i * verticalSpacing);
+
+            // Set the anchored position
+            rectTransform.anchoredPosition = newAnchoredPosition;
+
+            i += 10;
         }
-
-        // Print relevant ingredients to Unity debug log
-        Debug.Log("Relevant Ingredients for '" + searchTerm + "': " + string.Join(", ", relevantIngredients));
     }
 
-    private void Update()
-    {
+    // private void SearchIngredients(string searchTerm)
+    // {
+    //     if (searchTerm == "" || searchTerm == null) return;
+    //     // Convert search term to lowercase for case-insensitive search
+    //     string searchTermLower = searchTerm.ToLower();
 
-    }
+    //     // List to store relevant ingredients
+    //     var relevantIngredients = new System.Collections.Generic.List<string>();
+
+    //     // Iterate through all ingredients
+    //     foreach (string ingredient in allIngredients)
+    //     {
+    //         // Convert current ingredient to lowercase for case-insensitive comparison
+    //         string ingredientLower = ingredient.ToLower();
+
+    //         // Check if the search term is contained in the current ingredient
+    //         if (ingredientLower.Contains(searchTermLower))
+    //         {
+    //             // Add relevant ingredient to the list
+    //             relevantIngredients.Add(ingredient);
+    //         }
+    //     }
+
+    //     // Print relevant ingredients to Unity debug log
+    //     Debug.Log("Relevant Ingredients for '" + searchTerm + "': " + string.Join(", ", relevantIngredients));
+    // }
 }
