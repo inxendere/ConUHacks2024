@@ -17,16 +17,11 @@ Easy to build
 
 
 ## Installation
-
-    Note: you have to put your own ChatGPT api in the user folder
-    In your user folder in C drive, create a folder and call it .openai
-    In that folder, create a json called auth.json
-    In there, fill in the following:
-    {
-    "api_key": "YOUR API KEY HERE",
-    "organization": "YOUR ORGANIZATION HERE"
-    }
-
-```bash
-# Example installation command
-npm install your-package
+Note: you have to put your own ChatGPT api in the user folder
+In your user folder in C drive, create a folder and call it .openai
+In that folder, create a json called auth.json
+In there, fill in the following:
+{
+"api_key": "YOUR API KEY HERE",
+"organization": "YOUR ORGANIZATION HERE"
+}
