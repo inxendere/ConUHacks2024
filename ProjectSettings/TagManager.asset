@@ -6,6 +6,7 @@ TagManager:
   tags:
   - IngredientButtonTAG
   - SearchManager
+  - DishButtons
   layers:
   - Default
   - TransparentFX
