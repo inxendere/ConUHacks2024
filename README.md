@@ -13,7 +13,7 @@ Han Lee: [LinkedIn](https://www.linkedin.com/in/hanleehl/)
 ## Installation
 
 
-If you missed us at the demo and would like to try the app for yourself, you have to put your own OpenAI api in the user folder.
+If you missed us at the demo and would like to try the app for yourself, you have to put your own OpenAI api in the user folder.  
 In ```C:\Users\<your name here>```, create a folder and call it ```.openai```
 In that folder, create a json called ```auth.json```
 In there, fill in the following:
