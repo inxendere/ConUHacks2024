@@ -57,8 +57,13 @@ public class ChatGPTManager : MonoBehaviour
 
         CreateChatCompletionRequest request = new CreateChatCompletionRequest();
         request.Messages = messages;
-        // request.Model = "text-embedding-ada-002";
+
         request.Model = "gpt-4-1106-preview";
+
+        // comment or delete the line above and uncomment the line below 
+        // if you don't have gpt-4
+
+        // request.Model = "gpt-3.5-turbo";
 
         StartCoroutine(StartLoadingAnimation("Looking for dishes"));
 
