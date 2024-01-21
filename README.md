@@ -1,14 +1,12 @@
 # ConUHacks 2024 - Concordia Prep International
 
-Our submission for ConUHacks VIII.
-An AI driven app built within Unity to help you find your next meal using only your leftovers! Find creative and delicious uses for your ingredients, and learn some new dishes in the process.  
+Our submission for ConUHacks VIII.  
+Unsure of what to cook with the scattered ingredients you have in your fridge and kitchen? With this app, you can plug in the ingredients you have, and the AI will recommended several dishes with their recipe, as well as tell you how long and difficult it is to make. It's the perfect way to find use out of your leftovers, discovers new and unique meals, and practice your cooking skills!  
 Meet the team:  
 Taief Ahmed: [Personal Website](https://inxendere.github.io)  
 Amro Atique: [LinkedIn](https://www.linkedin.com/in/amroatique/)  
 Parsa Hejazi: [LinkedIn](https://www.linkedin.com/in/parsa-hejazi/)   
 Han Lee: [LinkedIn](https://www.linkedin.com/in/hanleehl/)  
-
-
 
 ## Installation
 Note: you have to put your own OpenAI api in the user folder.
