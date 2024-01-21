@@ -7,7 +7,7 @@ using TMPro;
 
 public class UnsplashImageLoader : MonoBehaviour
 {
-    public string unsplashAccessKey = "BwbNg-WF1SFol3XfoxgouXakGG9QeVl5vOtkFbJiBS0";
+    public string unsplashAccessKey = "x5Tj3K7ZegyYnDNDf2r6lblK0Yb6QaI1Tg_X3NEfy3Y";
     public TextMeshProUGUI searchInput;
     public RawImage rawImage;
 
