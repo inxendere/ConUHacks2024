@@ -1,7 +1,8 @@
 # ConUHacks 2024 - Concordia Prep International
 
 Our submission for ConUHacks VIII.  
-Unsure of what to cook with the scattered ingredients you have in your fridge and kitchen? With this app, you can plug in the ingredients you have, and the AI will recommended several dishes with their recipe, as well as tell you how long and difficult it is to make. It's the perfect way to find use out of your leftovers, discovers new and unique meals, and practice your cooking skills!  
+Unsure of what to cook with the scattered ingredients you have in your fridge and kitchen? With this app, you can plug in the ingredients you have, and the AI will recommended several dishes with their recipe. It's the perfect way to find use out of your leftovers, discovers new and unique meals, and practice your cooking skills!  
+
 Meet the team:  
 Taief Ahmed: [Personal Website](https://inxendere.github.io)  
 Amro Atique: [LinkedIn](https://www.linkedin.com/in/amroatique/)  
