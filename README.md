@@ -1,4 +1,4 @@
-# ConUHacks 2024 - Concordia Prep International
+# ConUHacks 2024 - dAIner
 
 Our submission for ConUHacks VIII.  
 
