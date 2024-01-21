@@ -3,19 +3,6 @@
 Our submission for ConUHacks VIII.
 An AI driven app built within Unity to help you find your next meal using only your leftovers!
 
-## Table of Contents
-
-- [Features](#features)
-- [Installation](#installation)
-- 
-## Features
-
-Built using Unity so the app runs everywhere
-High quality images from Unsplash
-Responsive and modern UI
-Save money by not throwing out leftovers
-Easy to build
-
 ## Installation
 Note: you have to put your own OpenAI api in the user folder.
 In your user folder in C drive, create a folder and call it ```.openai```
