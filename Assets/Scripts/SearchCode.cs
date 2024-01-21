@@ -140,7 +140,7 @@ public class SearchCode : MonoBehaviour
             // GameObject ingredientButtonObject = Instantiate(ingredientButton, ingredientStartPoint);
             // ingredientButtonObject.GetComponentInChildren<TextMeshProUGUI>().text = ingredient;
 
-            GameObject instantiatedUIObject = Instantiate(ingredientButton, canvasTransform);
+            GameObject instantiatedUIObject = Instantiate(ingredientButton, ingredientStartPoint);
             instantiatedUIObject.GetComponentInChildren<TextMeshProUGUI>().text = ingredient;
 
             // Access RectTransform of the instantiated UI object
@@ -154,7 +154,7 @@ public class SearchCode : MonoBehaviour
             // Set the anchored position
             rectTransform.anchoredPosition = newAnchoredPosition;
 
-            i += 10;
+            i += 12;
         }
     }
 

@@ -50,7 +50,7 @@ public class ChatGPTManager : MonoBehaviour
         responseText.text = "Looking for dishes...";
 
         ChatMessage newMessage = new ChatMessage();
-        newMessage.Content = "Give me a list of 5 dishes that use these ingredients (you don't have to use all the ingredients) with their cooking times and difficulty from easy, medium, hard in this format per line without any extra words or introduction: dish name, cooking time, difficulty." + newText;
+        newMessage.Content = "Give me a list of 5 dishes that use these ingredients (you don't have to use all the ingredients) with their cooking times and difficulty from easy, medium, hard in this format per line without any extra words or introduction: dish name, cooking time, difficulty, calorie amount." + newText;
         newMessage.Role = "user";
 
         messages.Add(newMessage);

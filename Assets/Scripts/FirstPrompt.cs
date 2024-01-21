@@ -12,6 +12,7 @@ public class FirstPrompt : MonoBehaviour
     string[] dishNames = new string[5];
     string[] dishTime = new string[5];
     string[] dishDifficulty = new string[5];
+    string[] dishCalories = new string[5];
 
     public List<GameObject> dishButtons = new List<GameObject>();
 
@@ -55,6 +56,7 @@ public class FirstPrompt : MonoBehaviour
             dishNames[i] = CommaSplits[0];
             dishTime[i] = CommaSplits[1];
             dishDifficulty[i] = CommaSplits[2];
+            dishCalories[i] = CommaSplits[3];
 
             i++;
         }
@@ -70,6 +72,7 @@ public class FirstPrompt : MonoBehaviour
             dishButton.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = " " + dishNames[i];
             dishButton.transform.Find("TimeToCook").GetComponent<TextMeshProUGUI>().text = dishTime[i];
             dishButton.transform.Find("Difficulty").GetComponent<TextMeshProUGUI>().text = " Difficulty:" + dishDifficulty[i];
+            dishButton.transform.Find("Calories").GetComponent<TextMeshProUGUI>().text = dishCalories[i];
             i++;
         }
     }
