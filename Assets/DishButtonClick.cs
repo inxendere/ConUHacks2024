@@ -1,25 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class DishButtonClick : MonoBehaviour
 {
     public GameObject dishInfoPanel;
+    public ChatGPTManager chatGPTManager;
 
-    private void OnEnable()
+    public TextMeshProUGUI nameOfDishObject;
+    public string nameOfDish;
+
+    private void Update()
     {
-        dishInfoPanel = GameObject.FindGameObjectWithTag("DishInfoPanel");
+        nameOfDish = nameOfDishObject.text;
+
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
 
+    public void FindDishInformation()
+    {
+        chatGPTManager.GetCookingInstructions(nameOfDish);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }

@@ -30,6 +30,9 @@ public class ChatGPTManager : MonoBehaviour
     public GameObject dishButtonsParent;
     public GameObject loadingScreen;
 
+    public GameObject dishInfoPanel;
+    TextMeshProUGUI dishInfoPanelText;
+
 
     private void Awake()
     {
@@ -39,6 +42,7 @@ public class ChatGPTManager : MonoBehaviour
         dishButtonsParent.SetActive(false);
     }
 
+    // for ingredients
     public async void AskChatGPT(string newText)
     {
         counter += 1;
@@ -56,7 +60,7 @@ public class ChatGPTManager : MonoBehaviour
         // request.Model = "text-embedding-ada-002";
         request.Model = "gpt-4-1106-preview";
 
-        StartCoroutine(StartLoadingAnimation());
+        StartCoroutine(StartLoadingAnimation("Looking for dishes"));
 
         var response = await openAI.CreateChatCompletion(request);
 
@@ -81,23 +85,69 @@ public class ChatGPTManager : MonoBehaviour
         }
     }
 
-    IEnumerator StartLoadingAnimation()
+    public async void GetCookingInstructions(string newText)
+    {
+        ChatMessage newMessage = new ChatMessage();
+        newMessage.Content = "Give me step-by-step instructions on how to cook this dish without an introductory statement:" + newText;
+        newMessage.Role = "user";
+
+        messages.Add(newMessage);
+
+        CreateChatCompletionRequest request = new CreateChatCompletionRequest();
+        request.Messages = messages;
+        // request.Model = "text-embedding-ada-002";
+        request.Model = "gpt-4-1106-preview";
+
+        StartCoroutine(StartLoadingAnimation("Gathering dish information"));
+
+        var response = await openAI.CreateChatCompletion(request);
+
+        if (response.Choices != null && response.Choices.Count > 0)
+        {
+            // StopCoroutine(StartLoadingAnimation());
+            StopAllCoroutines();
+            loadingScreen.SetActive(false);
+            // dishButtonsParent.SetActive(true);
+            dishInfoPanel.SetActive(true);
+            dishInfoPanelText = dishInfoPanel.GetComponentInChildren<TextMeshProUGUI>();
+
+            var chatResponse = response.Choices[0].Message;
+
+            messages.Add(chatResponse);
+
+            dishInfoPanelText.text = chatResponse.Content;
+
+            // Debug.Log(chatResponse.Content);
+
+            // responseText.text = chatResponse.Content;
+            // gptResponse = chatResponse.Content;
+
+            // activate dishesbutton
+        }
+    }
+
+    IEnumerator StartLoadingAnimation(string baseLoadingText)
     {
         loadingScreen.SetActive(true);
 
         TextMeshProUGUI loadingText = loadingScreen.GetComponentInChildren<TextMeshProUGUI>();
+        // loadingText.text = baseLoadingText;
+
         // for now
         responseText.text = "Looking for dishes...";
-        loadingText.text = "Looking for dishes...";
+        loadingText.text = baseLoadingText + "...";
+        // loadingText.text = "Looking for dishes...";
         yield return new WaitForSeconds(1f);
         responseText.text = "Looking for dishes....";
-        loadingText.text = "Looking for dishes....";
+        loadingText.text = baseLoadingText + "....";
+        // loadingText.text = "Looking for dishes....";
 
         yield return new WaitForSeconds(1f);
         responseText.text = "Looking for dishes.....";
-        loadingText.text = "Looking for dishes....";
+        // loadingText.text = "Looking for dishes....";
+        loadingText.text = baseLoadingText + "....";
 
         yield return new WaitForSeconds(1f);
-        StartCoroutine(StartLoadingAnimation());
+        StartCoroutine(StartLoadingAnimation(baseLoadingText));
     }
 }
