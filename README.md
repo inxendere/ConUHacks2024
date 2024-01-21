@@ -1,4 +1,4 @@
-# Project Name
+# ConUHacks 2024 - Concordia Prep International
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![GitHub Issues](https://img.shields.io/github/issues/your-username/your-repo.svg)](https://github.com/your-username/your-repo/issues)
