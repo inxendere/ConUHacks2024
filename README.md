@@ -30,10 +30,10 @@ In there, fill in the following:
 If it does not work afterwards, that means you either don't have GPT-4 or your tokens have expired.
 In either case, you need only carry out the small instruction as laid out in tthe ChatGPTController script starting at line 61.
 ```
-        request.Model = "gpt-4-1106-preview";
+request.Model = "gpt-4-1106-preview";
 
-        // comment or delete the line above and uncomment the line below 
-        // if you don't have gpt-4
+// comment or delete the line above and uncomment the line below 
+// if you don't have gpt-4
 
-        // request.Model = "gpt-3.5-turbo";
+// request.Model = "gpt-3.5-turbo";
 ```
