@@ -4771,7 +4771,7 @@ MonoBehaviour:
   responseText: {fileID: 1287443776}
   dishButtonsParent: {fileID: 1145326602}
   loadingScreen: {fileID: 1704408560}
-  dishInfoPanel: {fileID: 0}
+  dishInfoPanel: {fileID: 1370223643}
 --- !u!4 &1338848979
 Transform:
   m_ObjectHideFlags: 0
