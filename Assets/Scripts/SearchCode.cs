@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class SearchCode : MonoBehaviour
 {
+    public GameObject ingredientBackground;
     public TMP_InputField SearchBar;  // Reference to your input field
     public Transform canvasTransform;
     public GameObject ingredientButton; // button prefab
