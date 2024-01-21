@@ -84,7 +84,7 @@ public class SearchCode : MonoBehaviour
     "Star Anise", "Juniper Berries", "Allspice", "Bay Leaves", "Caraway Seeds", "Celery Seeds", "Mustard Seeds",
     "Black Mustard Seeds", "Brown Mustard Seeds", "Yellow Mustard Seeds", "Poppy Seeds", "Sesame Seeds",
     "Sunflower Seeds", "Pumpkin Seeds", "Flaxseeds", "Hemp Seeds", "Chia Seeds", "Pine Nuts", "Chestnuts",
-    "Hazelnuts", "Almonds" };
+    "Hazelnuts", "Almonds", "Bread", "Toast" };
 
     }
 
