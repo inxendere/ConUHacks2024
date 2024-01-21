@@ -5,7 +5,7 @@ An AI driven app built within Unity to help you find your next meal using only y
 Meet the team:  
 Taief Ahmed: [Personal Website](https://inxendere.github.io)  
 Amro Atique: [LinkedIn](https://inxendere.github.io)  
-Parsa Hafzi: [LinkedIn](https://inxendere.github.io)   
+Parsa Hejazi: [LinkedIn](https://www.linkedin.com/in/parsa-hejazi/)   
 Han Lee: [LinkedIn](https://inxendere.github.io)  
 
 
