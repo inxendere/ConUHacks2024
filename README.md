@@ -18,7 +18,14 @@ Easy to build
 
 ## Installation
 
-Provide instructions on how to install your project. Include any dependencies and commands needed to get started.
+    Note: you have to put your own ChatGPT api in the user folder
+    In your user folder in C drive, create a folder and call it .openai
+    In that folder, create a json called auth.json
+    In there, fill in the following:
+    {
+    "api_key": "YOUR API KEY HERE",
+    "organization": "YOUR ORGANIZATION HERE"
+    }
 
 ```bash
 # Example installation command
