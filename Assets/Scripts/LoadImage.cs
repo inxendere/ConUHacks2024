@@ -52,7 +52,7 @@ public class UnsplashImageLoader : MonoBehaviour
     public void SearchAndDisplayImage()
     {
         string query = searchInput.text;
-        Debug.Log(searchInput.text);
+        // Debug.Log(searchInput.text);
         StartCoroutine(LoadImage(query));
     }
 
