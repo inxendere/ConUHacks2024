@@ -11,6 +11,7 @@ public class UnsplashImageLoader : MonoBehaviour
     public TextMeshProUGUI searchInput;
     public RawImage rawImage;
 
+
     [Serializable]
     private class UnsplashResponse
     {
