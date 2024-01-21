@@ -4,9 +4,9 @@ Our submission for ConUHacks VIII.
 An AI driven app built within Unity to help you find your next meal using only your leftovers! Find creative and delicious uses for your ingredients, and learn some new dishes in the process.  
 Meet the team:  
 Taief Ahmed: [Personal Website](https://inxendere.github.io)  
-Amro Atique:  
-Parsa Hafzi:  
-Han Lee:  
+Amro Atique: [LinkedIn](https://inxendere.github.io)  
+Parsa Hafzi: [LinkedIn](https://inxendere.github.io)   
+Han Lee: [LinkedIn](https://inxendere.github.io)  
 
 
 
