@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -160.34027, y: 3.9182968}
+  m_AnchoredPosition: {x: -436, y: 3.9182968}
   m_SizeDelta: {x: 151.0257, y: 151.03}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &62569451
@@ -2522,7 +2522,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 122, y: -0.0000076293945}
+  m_AnchoredPosition: {x: 43, y: -0.0000076293945}
   m_SizeDelta: {x: -305.3937, y: -65.194}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1099581372
@@ -5924,6 +5924,7 @@ GameObject:
   - component: {fileID: 1866070178}
   - component: {fileID: 1866070177}
   - component: {fileID: 1866070180}
+  - component: {fileID: 1866070181}
   m_Layer: 5
   m_Name: searchBar
   m_TagString: Untagged
@@ -5949,8 +5950,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -13.179, y: -168}
-  m_SizeDelta: {x: 597.9097, y: 192.8186}
+  m_AnchoredPosition: {x: 0, y: -168}
+  m_SizeDelta: {x: 1079.8, y: 192.8186}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1866070177
 MonoBehaviour:
@@ -6107,7 +6108,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 01116863262834259b01e4a6012d0dd6, type: 3}
-  m_Type: 0
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -6137,6 +6138,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToEnable: {fileID: 1176806494}
+  searchBoxAnim: {fileID: 1866070181}
+--- !u!95 &1866070181
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866070175}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 276e9cbf1b2c3a5488abc8e8f3667b0a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1878605599
 GameObject:
   m_ObjectHideFlags: 0
