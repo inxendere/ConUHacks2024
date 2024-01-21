@@ -18,10 +18,13 @@ public class ClickButton : MonoBehaviour
     {
         if (ingredientHolder.selectedIngredients.Contains(buttonText))
         {
+            ingredientHolder.numberOfSelIngredients -= 1;
             ingredientHolder.selectedIngredients.Remove(buttonText);
+            // ingredientHolder.ingredientBasket += "\n -" + buttonText;
         }
         else
         {
+            ingredientHolder.numberOfSelIngredients += 1;
             ingredientHolder.selectedIngredients.Add(buttonText);
         }
     }

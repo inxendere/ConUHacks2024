@@ -1,20 +1,45 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class IngredientHolder : MonoBehaviour
 {
     public List<string> selectedIngredients;
     public ChatGPTManager chatGPTManager;
-    public string selectedIngredientsString = "";
+
+    public string ingredientBasket = "Ingredients you have:";    // for the user to see
+    public string selectedIngredientsString = "";   // for the ai
+
+    public TextMeshProUGUI ingredientBasketTMPro;
+
+    public int numberOfSelIngredients = 0;
+    int numberOfSelIngredientsCheck = 0;
+
 
     private void Awake()
     {
         selectedIngredientsString = "";
+        ingredientBasket = "Ingredients you have: \n";
     }
 
     private void Update()
     {
+
+        if (numberOfSelIngredientsCheck != numberOfSelIngredients)
+        {
+            numberOfSelIngredientsCheck = numberOfSelIngredients;
+            ingredientBasket = "Ingredients you have: \n";
+
+            foreach (string ingredient in selectedIngredients)
+            {
+                ingredientBasket += "-" + ingredient + "\n";
+            }
+
+            ingredientBasketTMPro.text = ingredientBasket;
+
+        }
+
         if (Input.GetKeyDown(KeyCode.Return))
         {
             // delete all buttons
@@ -33,6 +58,11 @@ public class IngredientHolder : MonoBehaviour
 
             chatGPTManager.AskChatGPT(selectedIngredientsString);
         }
+    }
+
+    public void UpdateIngredientBasket()
+    {
+
     }
 
 }
