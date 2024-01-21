@@ -115,10 +115,8 @@ public class SearchCode : MonoBehaviour
         // Iterate through all ingredients
         foreach (string ingredient in allIngredients)
         {
-            // Convert current ingredient to lowercase for case-insensitive comparison
             string ingredientLower = ingredient.ToLower();
 
-            // Check if the search term is contained in the current ingredient
             if (ingredientLower.Contains(searchTermLower))
             {
                 // Add relevant ingredient to the list
@@ -143,10 +141,8 @@ public class SearchCode : MonoBehaviour
             GameObject instantiatedUIObject = Instantiate(ingredientButton, ingredientStartPoint);
             instantiatedUIObject.GetComponentInChildren<TextMeshProUGUI>().text = ingredient;
 
-            // Access RectTransform of the instantiated UI object
             RectTransform rectTransform = instantiatedUIObject.GetComponent<RectTransform>();
 
-            // Calculate the new anchored position for each UI object
             Vector2 newAnchoredPosition = new Vector2(0, -i * verticalSpacing);
 
             // Debug.Log(-i * verticalSpacing);
