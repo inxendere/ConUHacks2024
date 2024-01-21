@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Parsa1.unity
+    guid: 00084269b72a14fa292eeb361415b1ea
+  - enabled: 0
     path: Assets/Scenes/UIElements.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}

@@ -1071,7 +1071,7 @@ MonoBehaviour:
   gptResponse: 
   counter: 0
   dishPanel: {fileID: 1181676559}
-  responseText: {fileID: 0}
+  responseText: {fileID: 1287443776}
 --- !u!4 &1338848979
 Transform:
   m_ObjectHideFlags: 0
@@ -1802,7 +1802,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedIngredients: []
-  chatGPTManager: {fileID: 0}
+  chatGPTManager: {fileID: 1338848978}
   selectedIngredientsString: 
 --- !u!1 &1710426178
 GameObject:
