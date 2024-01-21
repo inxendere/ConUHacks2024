@@ -50,7 +50,53 @@ public class SearchCode : MonoBehaviour
     // Call this method whenever the text in your search bar changes
     public void OnSearchValueChanged(string searchText)
     {
+        string searchTermLower = searchText.ToLower();
 
+        // List to store relevant ingredients
+        var relevantIngredients = new System.Collections.Generic.List<string>();
+
+        // Iterate through all ingredients
+        foreach (string ingredient in allIngredients)
+        {
+            // Convert current ingredient to lowercase for case-insensitive comparison
+            string ingredientLower = ingredient.ToLower();
+
+            // Check if the search term is contained in the current ingredient
+            if (ingredientLower.Contains(searchTermLower))
+            {
+                // Add relevant ingredient to the list
+                relevantIngredients.Add(ingredient);
+            }
+        }
+
+        // Print relevant ingredients to Unity debug log
+        Debug.Log("Relevant Ingredients for '" + searchText + "': " + string.Join(", ", relevantIngredients));
+    }
+
+    private void SearchIngredients(string searchTerm)
+    {
+        // Convert search term to lowercase for case-insensitive search
+        string searchTermLower = searchTerm.ToLower();
+
+        // List to store relevant ingredients
+        var relevantIngredients = new System.Collections.Generic.List<string>();
+
+        // Iterate through all ingredients
+        foreach (string ingredient in allIngredients)
+        {
+            // Convert current ingredient to lowercase for case-insensitive comparison
+            string ingredientLower = ingredient.ToLower();
+
+            // Check if the search term is contained in the current ingredient
+            if (ingredientLower.Contains(searchTermLower))
+            {
+                // Add relevant ingredient to the list
+                relevantIngredients.Add(ingredient);
+            }
+        }
+
+        // Print relevant ingredients to Unity debug log
+        Debug.Log("Relevant Ingredients for '" + searchTerm + "': " + string.Join(", ", relevantIngredients));
     }
 
     private void Update()
