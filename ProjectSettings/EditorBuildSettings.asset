@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/openingScene.unity
+    path: Assets/Scenes/openingScene.unity
     guid: ab2e2706795f94d038f119043403e9f4
   - enabled: 1
     path: Assets/Scenes/Parsa1.unity
