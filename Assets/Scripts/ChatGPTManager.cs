@@ -21,13 +21,19 @@ public class ChatGPTManager : MonoBehaviour
     private List<ChatMessage> messages = new List<ChatMessage>();
     public TextMeshProUGUI responseText;
 
+    public string gptResponse;
+
+    public int counter = 0;
+
     private void Awake()
     {
         responseText.text = "Waiting for your input...";
+        counter = 0;
     }
 
     public async void AskChatGPT(string newText)
     {
+        counter += 1;
         responseText.text = "Looking for ingredients...";
 
         ChatMessage newMessage = new ChatMessage();
@@ -56,6 +62,7 @@ public class ChatGPTManager : MonoBehaviour
             Debug.Log(chatResponse.Content);
 
             responseText.text = chatResponse.Content;
+            gptResponse = chatResponse.Content;
         }
     }
 
