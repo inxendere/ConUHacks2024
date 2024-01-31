@@ -1,4 +1,4 @@
-# ConUHacks 2024 - dAIner
+# ConUHacks 2024 - LeftOvers
 
 Our submission for ConUHacks VIII.  
 
